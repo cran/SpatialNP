@@ -1,0 +1,10 @@
+to.shape<-function(M,determ,trace,first)
+{
+ if(all(missing(determ),missing(trace),missing(first))) 
+  return(M/det(M)^(1/dim(M)[2]))
+ if(!missing(determ))
+  return(M*(determ/det(M))^(1/dim(M)[2]))
+ if(!missing(trace))
+  return(M*trace/sum(diag(M)))
+ M/M[1,1]
+}
