@@ -40,8 +40,10 @@ is \code{\link{rank.shape}}.
 \code{spatial.location} is a wrapper function for a unified access to
 both location estimates. The choice of estimate is done via
 \code{score}:
+\itemize{
 \item \code{"sign"} for spatial median 
 \item \code{"signrank"} for Hodges-Lehmann estimate 
+}
 
 If a matrix (must be symmetric and positive definite, but this is not
 checked) is given as \code{shape} the location estimate is found with
@@ -59,7 +61,7 @@ The estimate vector with the (final estimate of or given) shape matrix
 as attribute \code{"shape"}.
 }
 \references{Hettmansperger, T. and Randles, R. (2002) A Practical Affine Equivariant Multivariate Median, Biometrika, 89, pp. 851-860}
-\author{Seija Sirkia, \email{ssirkia@maths.jyu.fi}}
+\author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
 \seealso{\code{\link[ICSNP]{spatial.median}}, \code{\link[ICSNP]{HR.Mest}} \code{\link[ICSNP]{signrank.shape}}}
 

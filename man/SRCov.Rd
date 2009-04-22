@@ -37,7 +37,7 @@ means is used.
 }
 
 
-\author{Seija Sirkia, \email{ssirkia@maths.jyu.fi}}
+\author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
 
 \seealso{\link[=spatial.rank]{spatial

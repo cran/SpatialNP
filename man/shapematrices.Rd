@@ -44,10 +44,12 @@ to the identity matrix, see examples.
 
 \code{spatial.shape} is a wrapper function for a unified access to all
 four shape estimates. The choice of estimate is done via \code{score}:
+\itemize{
 \item \code{"sign"} for \code{\link[ICSNP]{tyler.shape}} 
-\item \code{"symmsign"} for \code{\link[ICSNP]{duembgen.shape}} \item
-\code{"rank"} for \code{rank.shape} \item
-\code{"signrank"} for \code{signrank.shape}
+\item \code{"symmsign"} for \code{\link[ICSNP]{duembgen.shape}} 
+\item \code{"rank"} for \code{rank.shape} 
+\item \code{"signrank"} for \code{signrank.shape}
+}
 
 \code{signrank.shape} (and \code{\link[ICSNP]{tyler.shape}}, thus also
 \code{spatial.shape}) requires the location vector with respect to
@@ -56,7 +58,7 @@ used.
 
 }
 
-\author{Seija Sirkia, \email{ssirkia@maths.jyu.fi}}
+\author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
 \seealso{\code{\link[ICSNP]{tyler.shape}}, \code{\link[ICSNP]{duembgen.shape}}, also \link[=SCov]{spatial sign and rank covariance matrices} and \link[=spatial.rank]{spatial signs and ranks}}
 \examples{

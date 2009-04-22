@@ -44,7 +44,7 @@ unless \code{regexp} is \code{TRUE}.}
   \item{data.name}{a character string giving the name of the data (and grouping vector)}
 }
 
-\author{Seija Sirkia, \email{ssirkia@maths.jyu.fi}}
+\author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
 \seealso{\link[=spatial.rank]{Spatial signs and ranks}}
 \examples{

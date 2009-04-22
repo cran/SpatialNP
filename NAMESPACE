@@ -12,12 +12,9 @@ export(
 "spatial.signrank",
 "spatial.rank",
 "sr.sphere.test",
-"sr.regression",
 "SCov",
 "SSCov",
 "RCov",
 "SRCov",
 "to.shape"
 )
-
-

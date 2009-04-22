@@ -37,7 +37,7 @@ sphericity but the data is standardized beforehand.}
 
 
 
-\author{Seija Sirkia, \email{ssirkia@maths.jyu.fi}}
+\author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 \seealso{\link[=SCov]{sign and rank covariance matrices}}
 \examples{
 A<-matrix(c(1,2,-3,4,3,-2,-1,0,4),ncol=3)

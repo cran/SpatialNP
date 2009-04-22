@@ -37,18 +37,18 @@ Spatial signed rank of an observation is defined as
    
 If a numerical value is given for \code{shape} and/or \code{center}
 these are used to transform the data before the computation of signs
-or ranks. A logical TRUE indicates that the shape or center should be
+or ranks. A logical \code{TRUE} indicates that the shape or center should be
 estimated. In this case an affine transformation that makes the
 resulting signs or ranks have a covariance matrix equal or
 proportional to the identity matrix and centerd on the origin is
-found. A logical FALSE indicates that the null value, that is, the
+found. A logical \code{FALSE} indicates that the null value, that is, the
 identity matrix or the origin, should be used. Note that only signed
 ranks depend on a center.
 
 The value of shape and/or location used are returned as attributes.
 }
 
-\author{Seija Sirkia, \email{ssirkia@maths.jyu.fi}}
+\author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
 \seealso{\code{\link[ICSNP]{spatial.sign}} for the signs, \link[=rank.shape]{spatial sign and rank matrices} and \code{\link{ae.hl.estimate}} for the standardizing transformations}
 \examples{

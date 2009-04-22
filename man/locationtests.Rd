@@ -40,7 +40,7 @@ Note that the conditionally distribution free p-value is only provided for the s
   \item{data.name}{a character string giving the name of the data (and grouping vector)}
 }
 
-\author{Seija Sirkia, \email{ssirkia@maths.jyu.fi}}
+\author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
 \seealso{\link[=spatial.rank]{Spatial signs and ranks}, \code{\link[ICSNP]{HotellingsT2}} for the classical Hotelling's \eqn{T^2} test}
 

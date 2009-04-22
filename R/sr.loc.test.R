@@ -84,10 +84,11 @@ function(X,Y=NULL,g=NULL,score=c("sign","rank"),nullvalue=NULL,cond=FALSE,cond.n
      },
      "rank"=
      {
-      sums<-pairsum(X)%*%mat.sqrt(solve(V))
-      ave<-apply(spatial.sign(sums,center=F,shape=F),2,mean)
-      rm(sums)
-      n*p*sum(ave^2)/(4*c2)
+      n*p*sum(apply(scoremat,2,mean)^2)
+#      sums<-pairsum(X)%*%mat.sqrt(solve(V))
+#      ave<-apply(spatial.sign(rbind(sums,X),center=F,shape=F),2,mean)
+#      rm(sums)
+#      n*p*sum(ave^2)/(4*c2)
      })
  } # end c==1
  else { # c != 1
@@ -105,8 +106,8 @@ function(X,Y=NULL,g=NULL,score=c("sign","rank"),nullvalue=NULL,cond=FALSE,cond.n
   Qd<-numeric(0)
   if(c==1) {
    for (i in 1:cond.n) {
-    d<-matrix(sample(c(-1,1),n*p,replace=T),nrow=n)
-    Qd<-c(Qd,n*p*sum(apply(scoremat*d,2,mean)^2))
+    d<-sample(c(-1,1),n,replace=T)
+    Qd<-c(Qd,n*p*sum(apply(sweep(scoremat,1,d,"*"),2,mean)^2))
    }
   }
   else {
@@ -114,7 +115,7 @@ function(X,Y=NULL,g=NULL,score=c("sign","rank"),nullvalue=NULL,cond=FALSE,cond.n
     gd<-sample(g)
     bar<-numeric(0)
     for (j in 1:c)
-     bar<-rbind(bar,apply(scoremat[gd==levels(gd)[i],,drop=F],2,mean))
+     bar<-rbind(bar,apply(scoremat[gd==levels(gd)[j],,drop=F],2,mean))
     Qd<-c(Qd,p*sum(sizes*(norm(bar)^2)))
    }
   }

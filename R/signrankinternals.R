@@ -1,26 +1,3 @@
-srreg.formula.2<-function(formula,data)
-{
-  m <- match.call(expand.dots = FALSE)
-  m$... <- NULL
-  m[[1]] <- as.name("model.frame")
-  m <- eval.parent(m)
-  Terms <- attr(m, "terms")
-  grouping <- model.response(m)
-  x <- model.matrix(Terms, m)
-  res<-list(Y=grouping,X=x)
-  return(res)
-} 
-
-srreg.formula<-function(formula,data)
-{
-m<-model.frame(formula)
-X<-model.matrix(formula,m)
-#if pielessä stop
-Y<-model.response(m)
-list(Y=Y,X=X)
-}
-
-
 norm<-function(X) 
 .C("norming", as.double(X), as.integer(dim(X)), res=double(dim(X)[1]),PACKAGE="ICSNP")$res
 
@@ -81,6 +58,7 @@ for(i in ind) {
  rm<-norm(sm)
  rp<-norm(sp)
  rm[rm==0]<-1
+ rp[rp==0]<-1
  tmp[i,]<-(apply(sweep(sm,1,rm,"/"),2,mean)+apply(sweep(sp,1,rp,"/"),2,mean))/2
 }
 tmp
@@ -96,10 +74,8 @@ gen.inv<-function(M)
 {
 p<-sqrt(dim(M)[1])
 eig<-eigen(M)
-attach(eig)
-values[1:((p+2)*(p-1)/2)]<-values[1:((p+2)*(p-1)/2)]^-1
-res<-vectors%*%diag(values)%*%t(vectors)
-detach(eig)
+eig$values[1:((p+2)*(p-1)/2)]<-eig$values[1:((p+2)*(p-1)/2)]^-1
+res<-eig$vectors%*%diag(eig$values)%*%t(eig$vectors)
 Re(res) #because it really is real!
 }
 

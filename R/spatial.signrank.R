@@ -21,7 +21,8 @@ function(X,center=TRUE,shape=TRUE,na.action=na.fail,...)
      else if(is.numeric(shape))
      # center needs to be set:
       if (center) {
-       center<-mat.sqrt(shape)%*%ae.hl.estimate(X,shape=shape,...)
+       center<-as.vector(mat.sqrt(shape)%*%ae.hl.estimate(X,shape=shape,...))
+       
        attr(center,"shape")<-NULL
       }
       else center<-rep(0,p)
@@ -43,7 +44,7 @@ function(X,center=TRUE,shape=TRUE,na.action=na.fail,...)
       else if(center)
       {
        shape<-diag(p)
-       center<-ae.hl.estimate(X,ae=F)
+       center<-ae.hl.estimate(X,shape=shape,...)
        attr(center,"shape")<-NULL
       }
       else
