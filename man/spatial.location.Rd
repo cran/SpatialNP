@@ -63,7 +63,7 @@ as attribute \code{"shape"}.
 \references{Hettmansperger, T. and Randles, R. (2002) A Practical Affine Equivariant Multivariate Median, Biometrika, 89, pp. 851-860}
 \author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
-\seealso{\code{\link[ICSNP]{spatial.median}}, \code{\link[ICSNP]{HR.Mest}} \code{\link[ICSNP]{signrank.shape}}}
+\seealso{\code{\link[ICSNP]{spatial.median}}, \code{\link[ICSNP]{HR.Mest}} \code{\link{signrank.shape}}}
 
 \examples{
 A<-matrix(c(1,2,-3,4,3,-2,-1,0,4),ncol=3)

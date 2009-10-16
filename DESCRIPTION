@@ -2,8 +2,8 @@ Package: SpatialNP
 Type: Package
 Title: Multivariate nonparametric methods based on spatial signs and
         ranks
-Version: 1.00
-Date: 2009-04-22
+Version: 1.0-1
+Date: 2009-10-16
 Author: Seija Sirkia, Klaus Nordhausen, Hannu Oja
 Maintainer: Seija Sirkia <seija.sirkia@iki.fi>
 Depends: ICSNP
@@ -12,6 +12,6 @@ Description: This package contains test and estimates of location,
         estimates of shape all based on spatial signs, symmetrized
         signs, ranks and signed ranks.
 License: GPL-2
-Packaged: 2009-04-22 11:02:37 UTC; sirkia
+Packaged: 2009-10-16 11:34:16 UTC; sirkia
 Repository: CRAN
-Date/Publication: 2009-04-22 16:01:42
+Date/Publication: 2009-10-16 12:07:22
