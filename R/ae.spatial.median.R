@@ -1,4 +1,4 @@
-ae.hl.estimate<- function(X, init=NULL, shape=TRUE, steps=Inf, maxiter=500,  eps=1e-06, na.action=na.fail)
+ae.spatial.median<- function(X, init=NULL, shape=TRUE, steps=Inf, maxiter=500, eps=1e-06, na.action=na.fail)
 { 
     X <- na.action(X)
     X <- as.matrix(X)
@@ -10,12 +10,12 @@ ae.hl.estimate<- function(X, init=NULL, shape=TRUE, steps=Inf, maxiter=500,  eps
     
     if (is.matrix(shape)) {
         X <- X %*% solve(mat.sqrt(shape))
-        res <- as.vector(mat.sqrt(shape)%*%hl.location(X, init=init, steps=steps, eps=eps))
+        res <- as.vector(mat.sqrt(shape) %*% spat.median(X, steps=steps))
         attr(res, "shape") <- shape
         return(res)
     }else if (is.logical(shape)) {
         if (!shape) {
-            res <- hl.location(X, init=init, steps=steps, eps=eps)
+            res <- spat.median(X, steps=steps)
             attr(res, "shape") <- diag(p)
             return(res)
         }
@@ -29,9 +29,9 @@ ae.hl.estimate<- function(X, init=NULL, shape=TRUE, steps=Inf, maxiter=500,  eps
         stop("'init' must be a numeric vector or NULL")
     }else if (length(init) != p) 
         stop("'init' is of wrong dimension")
-
+    
     mu <- init
-    V <- signrank.shape(X,fixed.loc=TRUE,location=mu)
+    V <- signs.shape(X,fixed.loc=TRUE,location=mu)
     differ <- Inf
     iter <- 0
     while(TRUE)
@@ -42,15 +42,15 @@ ae.hl.estimate<- function(X, init=NULL, shape=TRUE, steps=Inf, maxiter=500,  eps
       sqrtV<-mat.sqrt(V)
       A <- solve(sqrtV)
       Z<- sweep(X,2,mu)%*%t(A)  
-      mu.new <- mu+sqrtV%*%hl.center.step(Z,rep(0,p)) 
-      V.new<-sqrtV%*%SRCov(Z,rep(0,p))%*%sqrtV 
-     V.new<-to.shape(V.new)
+      mu.new <- mu+sqrtV%*%center.step(Z,rep(0,p)) 
+      V.new<-sqrtV%*%SCov(Z,rep(0,p))%*%sqrtV 
+     
      res<-as.vector(mu.new)
-     attr(res,"shape")<-V.new
+     attr(res,"shape")<-to.shape(V.new)
      if(all(is.infinite(steps),mat.norm(V.new-V)<eps,sqrt(sum((mu.new -mu)^2))<eps))  return(res)
      mu<-mu.new
      V<-V.new
-    }
+    } 
     }
 }
 

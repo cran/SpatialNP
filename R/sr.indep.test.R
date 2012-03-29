@@ -43,16 +43,16 @@
 	"sign"=
 	{
          METHOD<-"Multivariate independence test using spatial signs"
-	 SX<-spatial.sign(X,center=T,shape=T)
-	 SY<-spatial.sign(Y,center=T,shape=T)
+	 SX<-spatial.signs(X,center=T,shape=T)
+	 SY<-spatial.signs(Y,center=T,shape=T)
 	 ave<-t(SX)%*%SY/n
 	 n*p1*p2*mat.norm(ave)^2
 	},
 	"symmsign"=
 	{
          METHOD<-"Multivariate independence test using spatial symmetrized signs"
-	 SX<-spatial.sign(pairdiff(X),center=F,shape=T)
-	 SY<-spatial.sign(pairdiff(Y),center=F,shape=T)
+	 SX<-spatial.signs(pairdiff(X),center=F,shape=T)
+	 SY<-spatial.signs(pairdiff(Y),center=F,shape=T)
 	 # there are now n*(n-1)/2 rows in these matrices
 	 m<-choose(n,2)
 	 RX<-spatial.rank(X,shape=T)

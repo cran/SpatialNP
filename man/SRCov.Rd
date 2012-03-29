@@ -9,10 +9,10 @@ Functions to compute spatial sign, spatial symmetrized sign, spatial rank and
 spatial signed rank covariance matrices 
 }
 \usage{
-SCov(X, location, na.action = na.fail)
+SCov(X, location = NULL, na.action = na.fail)
 SSCov(X, na.action = na.fail)
 RCov(X, na.action = na.fail)
-SRCov(X, location, na.action = na.fail)
+SRCov(X, location = NULL, na.action = na.fail)
 }
 \arguments{
   \item{X}{matrix or a data frame}
@@ -32,13 +32,14 @@ of location etc. tests based on spatial signs and ranks. They are
 not affine equivariant.
 
 \code{SCov} and \code{SRCov} require a location vector with respect
-to which they are computed. If none is provided, vector of column
-means is used.
+to which they are computed. If none is provided, \code{SCov} uses 
+spatial median and \code{SRCov} uses Hodges-Lehmann estimator.
 }
 
 
 \author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
+\references{\cite{Visuri, S., Koivunen, V. and Oja, H. (2000). Sign and rank covariance matrices. \emph{J. Statistical Planning and Inference}, 91, 557-575.}}
 
 \seealso{\link[=spatial.rank]{spatial
 signs and ranks}, \link[=rank.shape]{corresponding shape matrices}

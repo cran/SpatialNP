@@ -1,25 +1,29 @@
-\name{Spatial symmetrized signs, ranks and signed ranks}
+\name{Spatial signs, symmetrized signs, ranks and signed ranks}
+\alias{spatial.signs}
 \alias{spatial.rank}
 \alias{spatial.symmsign}
 \alias{spatial.signrank}
-\title{Spatial symmetrized signs, ranks and signed ranks}
+\title{Spatial signs, symmetrized signs, ranks and signed ranks}
 
-\description{Functions to compute spatial symmetrized signs, ranks and
+\description{Functions to compute spatial signs, symmetrized signs, ranks and
 signed ranks.}
 
 \usage{
+spatial.signs(X, center = TRUE, shape = TRUE, 
+na.action = na.fail,...)
 spatial.symmsign(X, shape = TRUE, na.action = na.fail, ...)
 spatial.rank(X, shape = TRUE, na.action = na.fail, ...)
-spatial.signrank(X, center = TRUE, shape = TRUE, na.action = na.fail, ...)
+spatial.signrank(X, center = TRUE, shape = TRUE, 
+na.action = na.fail,...)
 }
 \arguments{
   \item{X}{a matrix or a data frame}
   \item{center}{a vector or a logical, see details}
   \item{shape}{a matrix or a logical, see details}
-  \item{na.action}{a function which indicates what should happen when the data
-          contain 'NA's.  Default is to fail.}
   \item{\dots}{arguments that can be passed on to function used for the
  estimation of shape.}
+  \item{na.action}{a function which indicates what should happen when the data
+          contain 'NA's.  Default is to fail.}
 }
 
 \details{ The spatial signs of an observed vector is simply the
@@ -50,10 +54,12 @@ The value of shape and/or location used are returned as attributes.
 
 \author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
-\seealso{\code{\link[ICSNP]{spatial.sign}} for the signs, \link[=rank.shape]{spatial sign and rank matrices} and \code{\link{ae.hl.estimate}} for the standardizing transformations}
+\references{\cite{Visuri, S., Koivunen, V. and Oja, H. (2000). Sign and rank covariance matrices. \emph{J. Statistical Planning and Inference}, 91, 557-575.}}
+
+\seealso{\code{\link[ICSNP]{spatial.sign}} for the signs, \link[=rank.shape]{spatial sign and rank covariance matrices} and \code{\link{spatial.shape}} for the standardizing transformations}
 \examples{
 A<-matrix(c(1,2,-3,4),ncol=2)
-X<-matrix(rt(20,1),ncol=2)\%*\%t(A)
+X<-matrix(rnorm(100),ncol=2)\%*\%t(A)
 def.par<-par(no.readonly=TRUE) # for resetting
 layout(matrix(1:4,ncol=2,nrow=2,byrow=TRUE))
 plot(X,col=c(2,rep(1,19)))

@@ -36,12 +36,14 @@ sphericity but the data is standardized beforehand.}
 }
 
 
-
 \author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
+
+\references{\cite{Sirkia et al. (2009) Tests and estimates of shape based on spatial signs and ranks. \emph{Journal of Nonparametric Statistics}, 21, 155-176.}}
+
 \seealso{\link[=SCov]{sign and rank covariance matrices}}
 \examples{
 A<-matrix(c(1,2,-3,4,3,-2,-1,0,4),ncol=3)
-X<-matrix(rt(150,1),ncol=3)\%*\%t(A)
+X<-matrix(rnorm(600),ncol=3)\%*\%t(A)
 sr.sphere.test(X,score="sign")
 }
 \keyword{multivariate}

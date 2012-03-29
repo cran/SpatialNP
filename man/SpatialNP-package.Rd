@@ -14,8 +14,8 @@ symmetrized signs (that is, signs of pairwise differences), ranks and signed ran
 \tabular{ll}{
 Package: \tab SpatialNP\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2008-07-02\cr
+Version: \tab 1.1\cr
+Date: \tab 2012-03-29\cr
 License: \tab GPL (>= 2)\cr
 }
 
@@ -29,13 +29,12 @@ functions, together with a utility function \code{\link{to.shape}}.  }
 
 
 \author{
-Seija Sirkia, Klaus Nordhausen, Hannu Oja
-Maintainer: Seija Sirkia, \email{seija.sirkia@iki.fi}}
+Seija Sirkia, Jari Miettinen, Klaus Nordhausen, Hannu Oja, Sara Taskinen \cr
+Maintainer: Jari Miettinen, \email{jari.p.miettinen@jyu.fi}}
 
-
-\references{\cite{Oja, H., Randles R. (2004) Multivariate Nonparametric Tests. \emph{Statistical Science} 19, 598-605}}
 \keyword{ package }
 \seealso{
-package \pkg{\link[ICSNP:ICSNP-package]{ICSNP}}}
+package \pkg{\link[ICSNP:ICSNP-package]{ICSNP}} \cr
+package \pkg{\link[MNM:MNM-package]{MNM}}}
 
 

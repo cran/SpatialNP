@@ -1,10 +1,9 @@
 `sr.sphere.test` <-
-function(X,score=c("sign","symmsign"),shape=NULL, na.action=na.fail)
+function(X, score=c("sign","symmsign"), shape=NULL, na.action=na.fail)
 {
- DNAME=deparse(substitute(X))
  X<-na.action(X)
- if(!all(sapply(X, is.numeric))) stop("'X' must be numeric") 
-
+ DNAME=deparse(substitute(X))
+ 
  score=match.arg(score)
  X<-as.matrix(X)
 
@@ -25,7 +24,7 @@ function(X,score=c("sign","symmsign"),shape=NULL, na.action=na.fail)
   "sign"=
   {
    METHOD="Test of sphericity using spatial signs" 
-   S<-spatial.sign(X,F,F)
+   S<-spatial.signs(X,F,F)
    S1<-as.vector(t(S)%*%S/n)
    Q1<-(sum((Cp%*%S1)^2))
    gamma<-2/(p*(p+2))

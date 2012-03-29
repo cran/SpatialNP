@@ -9,8 +9,8 @@ samples the null hypothesis is that all samples have the same
 location.  }
 
 \usage{ sr.loc.test(X, Y = NULL, g = NULL, score = c("sign", "rank"),
-nullvalue = NULL, cond = FALSE, cond.n = 1000, na.action = na.fail,
-...)  }
+nullvalue = NULL, cond = FALSE, cond.n = 1000,
+na.action = na.fail,...)  }
 
 \arguments{
   \item{X}{a matrix or a data frame }
@@ -42,14 +42,16 @@ Note that the conditionally distribution free p-value is only provided for the s
 
 \author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
-\seealso{\link[=spatial.rank]{Spatial signs and ranks}, \code{\link[ICSNP]{HotellingsT2}} for the classical Hotelling's \eqn{T^2} test}
+\references{\cite{Oja, H., Randles R. (2004) Multivariate Nonparametric Tests. \emph{Statistical Science} 19, 598-605.}}
+
+\seealso{\link[=spatial.rank]{Spatial signs and ranks}}
 
 \examples{
 A<-matrix(c(1,2,-3,4,3,-2,-1,0,4),ncol=3)
-X<-rbind(matrix(rt(100*3,1),ncol=3),matrix(rt(50*3,1)+1,ncol=3))\%*\%t(A)
+X<-rbind(matrix(rnorm(1500),ncol=3),matrix(rnorm(750)+1,ncol=3))\%*\%t(A)
 sr.loc.test(X,cond=TRUE)
-X[1:50,]<-X[1:50,]+1
-g<-factor(rep(c(1,2,3),each=50))
+X[1:250,]<-X[1:250,]+1
+g<-factor(rep(c(1,2,3),each=250))
 sr.loc.test(X,g=g,score="rank")
 }
 

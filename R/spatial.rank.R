@@ -1,8 +1,7 @@
 `spatial.rank` <-
 function(X,shape=TRUE,na.action=na.fail,...)
-    {     
-    X<-na.action(X)
-    if(!all(sapply(X, is.numeric))) stop("'X' must be numeric") 
+    { 
+    X <- na.action(X)
     X<-as.matrix(X)   
 
     p <- dim(X)[2]

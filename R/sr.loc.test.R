@@ -7,14 +7,15 @@ function(X,Y=NULL,g=NULL,score=c("sign","rank"),nullvalue=NULL,cond=FALSE,cond.n
   X<-as.matrix(X)
   g<-as.factor(rep(1,dim(X)[1]))
  }
- else if(!is.null(Y)) {            #there are X and Y
+ else if(!is.null(Y)) { 
+             #there are X and Y
+  X<-as.matrix(X)
+  Y<-as.matrix(Y)
   if(dim(X)[2]!=dim(Y)[2]) stop("X and Y must have the same number of columns")
   DNAME<-paste(deparse(substitute(X)),"and",deparse(substitute(Y)))
   X<-na.action(X)
   Y<-na.action(Y)
   g<-factor(c(rep(1,dim(X)[1]),rep(2,dim(Y)[1])))
-  X<-as.matrix(X)
-  Y<-as.matrix(Y)
   X<-rbind(X,Y)
  }
  else if(!is.factor(g))            #there is a g but it's not a factor
@@ -51,12 +52,12 @@ function(X,Y=NULL,g=NULL,score=c("sign","rank"),nullvalue=NULL,cond=FALSE,cond.n
       if (c==1)
       {
        METHOD<-"One sample location test using spatial signs"
-       scoremat<-spatial.sign(X,center=F)
+       scoremat<-spatial.signs(X,center=F)
       }
       else
       {
        METHOD<-"Several samples location test using spatial signs"
-       scoremat<-spatial.sign(X)
+       scoremat<-spatial.signs(X)
       }
      },
      "rank"=
@@ -84,11 +85,11 @@ function(X,Y=NULL,g=NULL,score=c("sign","rank"),nullvalue=NULL,cond=FALSE,cond.n
      },
      "rank"=
      {
-      n*p*sum(apply(scoremat,2,mean)^2)
-#      sums<-pairsum(X)%*%mat.sqrt(solve(V))
-#      ave<-apply(spatial.sign(rbind(sums,X),center=F,shape=F),2,mean)
-#      rm(sums)
-#      n*p*sum(ave^2)/(4*c2)
+      
+      sums<-pairsum(X)%*%mat.sqrt(solve(V))
+      ave<-apply(spatial.signs(rbind(sums,X),center=F,shape=F),2,mean)
+      rm(sums)
+      n*p*sum(ave^2)/(4*c2)
      })
  } # end c==1
  else { # c != 1

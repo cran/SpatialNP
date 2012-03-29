@@ -1,20 +1,27 @@
-importFrom(ICSNP, spatial.median, spatial.sign, HR.Mest, duembgen.shape, tyler.shape)
 
 export(
 "ae.hl.estimate",
-"sr.indep.test",
-"sr.loc.test",
+"ae.spatial.median",
+"symmsign.shape",
 "rank.shape",
 "signrank.shape",
 "spatial.shape",
 "spatial.location",
-"spatial.symmsign",
+"spatial.signs",
 "spatial.signrank",
+"spatial.symmsign",
 "spatial.rank",
+"sr.indep.test",
+"sr.loc.test",
 "sr.sphere.test",
 "SCov",
 "SSCov",
 "RCov",
 "SRCov",
-"to.shape"
+"symmhuber",
+"mvhuberM",
+"to.shape",
+"signs.shape"
 )
+
+useDynLib(SpatialNP)

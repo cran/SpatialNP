@@ -9,8 +9,8 @@ variables. Inference is based on the spatial signs of the
 observations, symmetrized signs of the observations or spatial signed
 ranks of the observations.  }
 
-\usage{ sr.indep.test(X, Y = NULL, g = NULL, score = c("sign",
-"symmsign", "rank"), regexp= FALSE, cond = FALSE, cond.n = 1000,
+\usage{ sr.indep.test(X, Y = NULL, g = NULL, score = c("sign", 
+"symmsign", "rank"), regexp = FALSE, cond = FALSE, cond.n = 1000, 
 na.action = na.fail) }
 
 \arguments{
@@ -46,11 +46,13 @@ unless \code{regexp} is \code{TRUE}.}
 
 \author{Seija Sirkia, \email{seija.sirkia@iki.fi}}
 
+\references{\cite{Taskinen, S., Oja, H., Randles R. (2004) Multivariate Nonparametric Tests of Independence. \emph{JASA}, 100, 916-925}}
+
 \seealso{\link[=spatial.rank]{Spatial signs and ranks}}
 \examples{
 A<-matrix(c(1,2,-3,4,3,-2,-1,0,4),ncol=3)
-X<-matrix(rt(150,1),ncol=3)\%*\%t(A)
-Y<-cbind(X+runif(150,-1,1),runif(50))
+X<-matrix(rnorm(3000),ncol=3)\%*\%t(A)
+Y<-cbind(X+runif(3000,-1,1),runif(1000))
 sr.indep.test(X,Y)
 #alternative calls:
 Z<-cbind(X,Y)

@@ -1,8 +1,8 @@
-`rank.shape` <- function(X, init=NULL, steps=Inf, eps=1e-6, maxiter=100, na.action=na.fail)
-{ 
- X <- na.action(X)
- X<-as.matrix(X) 
-
+`symmsign.shape` <- function(X, init=NULL, steps=Inf, eps=1e-6, maxiter=100, na.action=na.fail)
+{
+ X<-na.action(X)
+ X<-as.matrix(X)
+ n<-dim(X)[1] 
  p<-dim(X)[2]
  if(p==1) return(diag(1))
  if (is.null(init)) init<-covshape(X)
@@ -17,11 +17,11 @@
   if(iter>=maxiter) stop("maxiter reached")
   iter<-iter+1
   sqrtV<-mat.sqrt(V)
-  R<-ranks(X%*%solve(sqrtV))
-  V.new<-sqrtV%*%(t(R)%*%R)%*%sqrtV
+  V.new<-sqrtV%*%SSCov(X%*%solve(sqrtV))%*%sqrtV
   V.new<-to.shape(V.new)
   if(all(is.infinite(steps),mat.norm(V.new-V)<eps)) return(V.new)
   V<-V.new
  }
 }
+
 

@@ -1,0 +1,13 @@
+LOG of the CHANGES in the package SpatialNP
+
+Version 1.1-0:
+
+* Jari Miettinen (new maintainer) joined the team
+* New functions ae.spatial.median, mvhuberM, signs.shape, symmsign.shape, symmhuber
+* Function ae.hl.estimate was made faster
+* Functions spatial.shape (scores "sign" and "signrank") and signrank.shape modified so that if location is not given, the affine equivariant estimates are computed
+* Bug fixed in functions spatial.signrank and signrank.shape (reported by Yi Li)
+
+Version 1.0-1:
+
+First version released on CRAN
