@@ -1,4 +1,4 @@
-1684faa25f43d114c6127155b56f5611 *DESCRIPTION
+7df29c8235feb2b1f54388caa7e80072 *DESCRIPTION
 2d3d06ace85427160bba156aac8a8079 *NAMESPACE
 4dea14b297d778aaa4414fb49106f11e *R/RCov.R
 aa840fda512647accae13afd5adde671 *R/SCov.R
@@ -23,7 +23,7 @@ fb65d08fd66c179922593d84f3eea7b5 *R/spatial.symmsign.R
 53dae5b3014e7a137320637498917818 *R/symmhuber.R
 215d4793586cf38b6bcacd8449aa4922 *R/symmsign.shape.R
 e7d2462aaf443112e36143318393221d *R/to.shape.R
-5406dd48c7a3e411436f3a75e0fe603a *inst/ChangeLog
+9399b66251e4d045cf3415812d5e4f6d *inst/ChangeLog
 b4c731c8a3434516926b4e500e096abd *man/Huber.Rd
 36c74943ad0f15ccca776e7d70b0795c *man/SRCov.Rd
 5dd1b4bb686b004e01e2935874cfd41a *man/SpatialNP-package.Rd
@@ -34,4 +34,4 @@ ff60c53d61fcce667af7f2bd1bdd6f60 *man/locationtests.Rd
 180ec1d2392db61e8871673d5e5d3a7a *man/spatialsignsranks.Rd
 08ff64350721a1d5d9d719c8560fe2dc *man/sphericitytests.Rd
 e180088e4ab0d67db53bd3a442befe57 *man/to.shape.Rd
-fa2099e85046f5c9a6508a7830fb233c *src/spatialnp.cpp
+99dc7931a1c8c9919e4f9ddff34222a8 *src/spatialnp.cpp

@@ -439,7 +439,7 @@ using namespace std;
   delete [] tempp;
 }
 
-   bool is_same(double *X, int k)
+   bool issame(double *X, int k)
   {
     int i;
     bool result=true;
@@ -475,7 +475,7 @@ using namespace std;
            Y[j]=vectors[i][j];
            Y[k+j]=y[j];
          }  
-	 if(is_same(Y,k)){
+	 if(issame(Y,k)){
            y[0]+=0.00001;
          } 
        } 
@@ -549,7 +549,7 @@ using namespace std;
            Y[j]=vectors[i][j];
            Y[k+j]=y[j];
          }  
-	 if(is_same(Y,k)){
+	 if(issame(Y,k)){
            y[0]+=0.00001;
          } 
        }

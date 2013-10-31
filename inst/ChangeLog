@@ -1,5 +1,9 @@
 LOG of the CHANGES in the package SpatialNP
 
+Version 1.1-1:
+
+* Name ambiguity caused by a new C++ compiler solved
+
 Version 1.1-0:
 
 * Jari Miettinen (new maintainer) joined the team
