@@ -6,16 +6,14 @@
 Multivariate nonparametric tests and estimates based on spatial signs and ranks.
 }
 \description{
-This package contains tests and an estimate of location, tests of independence,
-tests of sphericity and several estimates of shape all based on spatial signs, 
-symmetrized signs (that is, signs of pairwise differences), ranks and signed ranks.
+Test and estimates of location, tests of independence, tests of sphericity and several estimates of shape all based on spatial signs, symmetrized signs, ranks and signed ranks. For details, see Oja and Randles (2004) <doi:10.1214/088342304000000558> and Oja (2010)  <doi:10.1007/978-1-4419-0468-3>.
 }
 \details{
 \tabular{ll}{
 Package: \tab SpatialNP\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2012-03-29\cr
+Version: \tab 1.1-2\cr
+Date: \tab 2017-09-11\cr
 License: \tab GPL (>= 2)\cr
 }
 
@@ -30,7 +28,7 @@ functions, together with a utility function \code{\link{to.shape}}.  }
 
 \author{
 Seija Sirkia, Jari Miettinen, Klaus Nordhausen, Hannu Oja, Sara Taskinen \cr
-Maintainer: Jari Miettinen, \email{jari.p.miettinen@jyu.fi}}
+Maintainer: Jari Miettinen, \email{jari.p.miettinen@aalto.fi}}
 
 \keyword{ package }
 \seealso{

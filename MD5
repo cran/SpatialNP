@@ -1,5 +1,5 @@
-7df29c8235feb2b1f54388caa7e80072 *DESCRIPTION
-2d3d06ace85427160bba156aac8a8079 *NAMESPACE
+82a0ecf45a8b12f2499ec69353f1f2fa *DESCRIPTION
+479b168b105962e435e94452951470d3 *NAMESPACE
 4dea14b297d778aaa4414fb49106f11e *R/RCov.R
 aa840fda512647accae13afd5adde671 *R/SCov.R
 f6b44a022be1f84d002d1011bb0e8266 *R/SRCov.R
@@ -9,7 +9,7 @@ a71d3d13c01bb66e16ef7254d2efd54c *R/ae.spatial.median.R
 fa6b287a8af1f0eea55bb7a589d65c66 *R/mvhuberM.R
 eb054b653ee0d4a3b1bd794cc4684fd7 *R/rank.shape.R
 e1424b1b255b6698ece4083ff1ecb61e *R/signrank.shape.R
-3ae317c03f7a6cae48e3f2e9afa4ae74 *R/signrankinternals.R
+df9731c7eb95cf062c57842b85455131 *R/signrankinternals.R
 f4806f9c87cbb04d4293dbf016600672 *R/signs.shape.R
 c6e13b8063e7da9e720459417de0e0f0 *R/spatial.location.R
 4e17fe618c2398dca53c693e4758165a *R/spatial.rank.R
@@ -26,7 +26,7 @@ e7d2462aaf443112e36143318393221d *R/to.shape.R
 9399b66251e4d045cf3415812d5e4f6d *inst/ChangeLog
 b4c731c8a3434516926b4e500e096abd *man/Huber.Rd
 36c74943ad0f15ccca776e7d70b0795c *man/SRCov.Rd
-5dd1b4bb686b004e01e2935874cfd41a *man/SpatialNP-package.Rd
+05257dfa41090c3d93c71247adea7ff1 *man/SpatialNP-package.Rd
 7becfdab6e4184de4ea4e391a6730dbb *man/independencetests.Rd
 ff60c53d61fcce667af7f2bd1bdd6f60 *man/locationtests.Rd
 85370903a7d68cd12e4e26f2b0fa0859 *man/shapematrices.Rd
@@ -34,4 +34,5 @@ ff60c53d61fcce667af7f2bd1bdd6f60 *man/locationtests.Rd
 180ec1d2392db61e8871673d5e5d3a7a *man/spatialsignsranks.Rd
 08ff64350721a1d5d9d719c8560fe2dc *man/sphericitytests.Rd
 e180088e4ab0d67db53bd3a442befe57 *man/to.shape.Rd
-99dc7931a1c8c9919e4f9ddff34222a8 *src/spatialnp.cpp
+2efb99653fbb6cd09091cab3287ba365 *src/init.c
+0697437d3483728add5265b9ba1857ce *src/spatialnp.cpp

@@ -8,14 +8,14 @@ pairdiff<-function(X)
 {
 X<-as.matrix(X)
 d<-dim(X)
-matrix(.C("pairdiff", as.double(X),as.integer(d), res=double(choose(d[1],2)*d[2]),PACKAGE="SpatialNP")$res,ncol=d[2],byrow=T)
+matrix(.C("pairdiffc", as.double(X),as.integer(d), res=double(choose(d[1],2)*d[2]),PACKAGE="SpatialNP")$res,ncol=d[2],byrow=T)
 }
 
 pairsum<-function(X)
 {
 X<-as.matrix(X)
 d<-dim(X)
-matrix(.C("pairsum", as.double(X),as.integer(d), res=double(choose(d[1],2)*d[2]),PACKAGE="SpatialNP")$res,ncol=d[2],byrow=T)
+matrix(.C("pairsumc", as.double(X),as.integer(d), res=double(choose(d[1],2)*d[2]),PACKAGE="SpatialNP")$res,ncol=d[2],byrow=T)
 }
 
 sumsignout<-function(X)
@@ -116,7 +116,7 @@ mat.norm<-function(A)
 }
 
 center.step<-function(X,y)
-# Returns AVE[U(xi-y)]/AVE[|xi-y|⁻¹]
+# Returns AVE[U(xi-y)]/AVE[|xi-y|]
 {
 X<-as.matrix(X)
 d<-dim(X)
@@ -124,7 +124,7 @@ c(.C("center_step", as.double(X),as.integer(d),as.double(y), res=double(d[2]),PA
 }
 
 spat.med.step<-function(X,y)
-# Returns y+AVE[U(xi-y)]/AVE[|xi-y|⁻¹]
+# Returns y+AVE[U(xi-y)]/AVE[|xi-y|]
 {
 X<-as.matrix(X)
 d<-dim(X)
@@ -145,12 +145,12 @@ d<-dim(X)
 c(.C("hl_center_step", as.double(X),as.integer(d),as.double(y),res=double(d[2]),PACKAGE="SpatialNP")$res)
 }
 
-hl.loc.step<-function(X,y)
-{
-X<-as.matrix(X)
-d<-dim(X)
-c(.C("hl_loc_step", as.double(X),as.integer(d),as.double(y), res=double(d[2]),PACKAGE="SpatialNP")$res)
-}
+#hl.loc.step<-function(X,y)
+#{
+#X<-as.matrix(X)
+#d<-dim(X)
+#c(.C("hl_loc_step", as.double(X),as.integer(d),as.double(y), #res=double(d[2]),PACKAGE="SpatialNP")$res)
+#}
 
 spat.median <- function (X, init=NULL, steps=Inf, maxiter=500, eps=1e-06, na.action=na.fail)
 { 

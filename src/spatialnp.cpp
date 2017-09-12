@@ -85,7 +85,7 @@ using namespace std;
     return Z;
   }
  
-    void pairdiff(double *X, int *nk, double *result)
+    void pairdiffc(double *X, int *nk, double *result)
   {
     int n=nk[0]; 
     int k=nk[1]; 
@@ -115,7 +115,7 @@ using namespace std;
       r++;}
   }
 
-  void pairsum(double *X, int *nk, double *result)
+  void pairsumc(double *X, int *nk, double *result)
   {
     int n=nk[0]; 
     int k=nk[1]; 

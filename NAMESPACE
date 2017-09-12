@@ -1,3 +1,4 @@
+import(stats)
 
 export(
 "ae.hl.estimate",
@@ -24,4 +25,4 @@ export(
 "signs.shape"
 )
 
-useDynLib(SpatialNP)
+useDynLib(SpatialNP, .registration = TRUE)
