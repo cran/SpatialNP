@@ -59,6 +59,8 @@
 	 RY<-spatial.rank(Y,shape=T)
 	 cx1<-mean(norm(RX)^2)
 	 cx2<-mean(norm(RY)^2)
+      if(p1==1){ cx1<-1/3 }
+      if(p2==1){ cx2<-1/3 } 
 	 ave<-t(SX)%*%SY/m
 	 ((n*p1*p2)/(4*cx1*cx2))*mat.norm(ave)^2
 	},

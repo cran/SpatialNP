@@ -12,8 +12,8 @@ Test and estimates of location, tests of independence, tests of sphericity and s
 \tabular{ll}{
 Package: \tab SpatialNP\cr
 Type: \tab Package\cr
-Version: \tab 1.1-2\cr
-Date: \tab 2017-09-11\cr
+Version: \tab 1.1-3\cr
+Date: \tab 2018-06-05\cr
 License: \tab GPL (>= 2)\cr
 }
 

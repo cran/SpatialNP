@@ -1,5 +1,14 @@
 LOG of the CHANGES in the package SpatialNP
 
+Version 1.1-3:
+
+* Corrections to independence tests in univariate cases
+* Errors changed to warnings
+
+Version 1.1-2:
+
+* Maintainer's email address changed
+
 Version 1.1-1:
 
 * Name ambiguity caused by a new C++ compiler solved

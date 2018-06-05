@@ -14,7 +14,7 @@
  while(TRUE)
  {
   if(iter>=steps) return(V)
-  if(iter>=maxiter) stop("maxiter reached")
+  if(iter>=maxiter) warning("maxiter reached")
   iter<-iter+1
   sqrtV<-mat.sqrt(V)
   V.new<-sqrtV%*%SSCov(X%*%solve(sqrtV))%*%sqrtV

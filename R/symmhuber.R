@@ -18,7 +18,7 @@
  while(TRUE)
  {
   if(iter>=steps) return(V)
-  if(iter>=maxiter) stop("maxiter reached")
+  if(iter>=maxiter) warning("maxiter reached")
   iter<-iter+1
   V.new<-SSCov.hub(X,solve(V),c.square,sigma.square)
   if(all(is.infinite(steps),mat.norm(V.new-V)<eps)) 

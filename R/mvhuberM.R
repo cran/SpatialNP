@@ -26,7 +26,7 @@ mvhuberM <- function(X, qg=0.9, fixed.loc=FALSE, location=NULL, init=NULL, steps
      iter <- 0
      while(TRUE) {
         if(iter==steps) break
-        if(iter>=maxiter) stop("maxiter reached")
+        if(iter>=maxiter) warning("maxiter reached")
         iter <- iter + 1
         r <- sqrt(mahalanobis(X, center = mu, cov = V))
         w1 <- (r <= c1) + (c1 * (r > c1))/r
@@ -47,7 +47,7 @@ mvhuberM <- function(X, qg=0.9, fixed.loc=FALSE, location=NULL, init=NULL, steps
      iter <- 0
      while(TRUE) {
         if(iter==steps) break
-        if(iter>=maxiter) stop("maxiter reached")
+        if(iter>=maxiter) warning("maxiter reached")
         iter <- iter + 1
         r <- sqrt(mahalanobis(X, center = mu, cov = V))
         w1 <- (r <= c1) + (c1 * (r > c1))/r

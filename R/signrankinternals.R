@@ -33,7 +33,7 @@ tmp<-matrix(.C("sum_of_sign_outers", as.double(X),as.integer(d), res=double(d[2]
 ranks<-function(X)
 {
 d<-dim(X)
-if(any(d[2]==1,is.vector(X))) return(rank(X))
+if(any(d[2]==1,is.vector(X))) return((2*rank(X)-length(X)-1)/length(X))
 tmp<-matrix(.C("spatial_ranks", as.double(X),as.integer(d), res=double(d[1]*d[2]),PACKAGE="SpatialNP")$res,ncol=d[2],byrow=T)
 
 #need to check whether multiple values caused a problem:
@@ -168,7 +168,7 @@ spat.median <- function (X, init=NULL, steps=Inf, maxiter=500, eps=1e-06, na.act
    while (TRUE) {
         if(iter>=steps) return(y)
         if (iter == maxiter) 
-            stop("maxiter reached without convergence")
+            warning("maxiter reached without convergence")
         y.new <- spat.med.step(X,y)
         differ <- sqrt(sum((y -y.new)^2))
         iter <- iter + 1
@@ -192,7 +192,7 @@ hl.location<-function(X, init=NULL, steps=Inf, maxiter=500, eps=1e-06, na.action
    while (TRUE) {
         if(iter>=steps) return(y)
         if (iter == maxiter) 
-            stop("maxiter reached without convergence")
+            warning("maxiter reached without convergence")
         y.new <- y+hl.center.step(X,y)
         differ <- sqrt(sum((y -y.new)^2))
         iter <- iter + 1

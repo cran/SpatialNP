@@ -23,7 +23,7 @@
  while(TRUE)
  {
    if(iter>=steps) return(res)
-   if(iter>=maxiter) stop("maxiter reached")
+   if(iter>=maxiter) warning("maxiter reached")
    iter<-iter+1
 
    sqrtV<-mat.sqrt(V)  
@@ -46,7 +46,7 @@
  while(TRUE)
  {
    if(iter>=steps) return(res)
-   if(iter>=maxiter) stop("maxiter reached")
+   if(iter>=maxiter) warning("maxiter reached")
    iter<-iter+1
    sqrtV<-mat.sqrt(V)  
    A<-solve(sqrtV)

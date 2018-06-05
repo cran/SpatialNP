@@ -22,7 +22,7 @@
         spatialsigns <- sign(X - center)
         attr(spatialsigns, "center") <- center
         attr(spatialsigns, "shape") <- "in the univariate case shape is not estimated"
-        return(spatial.signs)
+        return(spatialsigns)
     }
     if (!all(is.numeric(center), is.numeric(shape))) {
         if (is.numeric(center)) 

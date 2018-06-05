@@ -37,7 +37,7 @@ ae.hl.estimate<- function(X, init=NULL, shape=TRUE, steps=Inf, maxiter=500,  eps
     while(TRUE)
     {
      if(iter>=steps) return(res)
-     if(iter>=maxiter) stop("maxiter reached")
+     if(iter>=maxiter) warning("maxiter reached")
       iter<-iter+1
       sqrtV<-mat.sqrt(V)
       A <- solve(sqrtV)
