@@ -64,7 +64,7 @@ as attribute \code{"shape"}.
 }
 \references{Hettmansperger, T. and Randles, R. (2002) A Practical Affine Equivariant Multivariate Median, Biometrika, 89, pp. 851-860}
 
-\author{Seija Sirkia, \email{seija.sirkia@iki.fi}, Jari Miettinen, \email{jari.p.miettinen@jyu.fi}}
+\author{Seija Sirkia, \email{seija.sirkia@iki.fi}, Jari Miettinen, \email{jari.p.miettinen@aalto.fi}}
 
 \seealso{\code{\link[ICSNP]{spatial.median}}, \code{\link{signrank.shape}}}
 

@@ -12,12 +12,12 @@ Test and estimates of location, tests of independence, tests of sphericity and s
 \tabular{ll}{
 Package: \tab SpatialNP\cr
 Type: \tab Package\cr
-Version: \tab 1.1-3\cr
-Date: \tab 2018-06-05\cr
+Version: \tab 1.1-4\cr
+Date: \tab 2019-10-30\cr
 License: \tab GPL (>= 2)\cr
 }
 
-In this package there are three functions for inference,
+There are three functions for inference,
 \code{\link{sr.loc.test}}, \code{\link{sr.indep.test}} and
 \code{\link{sr.sphere.test}}, for location, independence and
 sphericity tests. The so called \link[=rank.shape]{inner} and

@@ -1,5 +1,9 @@
 LOG of the CHANGES in the package SpatialNP
 
+Version 1.1-4:
+
+* New functions symmsign.shape.inc, symmhuber.inc, symm.mvtmle, symm.mvtmle.inc
+
 Version 1.1-3:
 
 * Corrections to independence tests in univariate cases

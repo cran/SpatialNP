@@ -22,7 +22,11 @@ export(
 "symmhuber",
 "mvhuberM",
 "to.shape",
-"signs.shape"
+"signs.shape",
+"symmsign.shape.inc",
+"symmhuber.inc",
+"symm.mvtmle",
+"symm.mvtmle.inc"
 )
 
 useDynLib(SpatialNP, .registration = TRUE)
