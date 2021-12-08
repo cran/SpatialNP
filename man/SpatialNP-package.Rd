@@ -12,8 +12,8 @@ Test and estimates of location, tests of independence, tests of sphericity and s
 \tabular{ll}{
 Package: \tab SpatialNP\cr
 Type: \tab Package\cr
-Version: \tab 1.1-4\cr
-Date: \tab 2019-10-30\cr
+Version: \tab 1.1-5\cr
+Date: \tab 2021-12-08\cr
 License: \tab GPL (>= 2)\cr
 }
 
@@ -28,7 +28,7 @@ functions, together with a utility function \code{\link{to.shape}}.  }
 
 \author{
 Seija Sirkia, Jari Miettinen, Klaus Nordhausen, Hannu Oja, Sara Taskinen \cr
-Maintainer: Jari Miettinen, \email{jari.p.miettinen@aalto.fi}}
+Maintainer: Klaus Nordhausen, \email{klaus.k.nordhausen@jyu.fi}}
 
 \keyword{ package }
 \seealso{

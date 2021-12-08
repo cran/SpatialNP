@@ -1,5 +1,9 @@
 LOG of the CHANGES in the package SpatialNP
 
+Version 1.1-5:
+
+* Change of maintainer
+
 Version 1.1-4:
 
 * New functions symmsign.shape.inc, symmhuber.inc, symm.mvtmle, symm.mvtmle.inc
