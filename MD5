@@ -1,4 +1,4 @@
-b732236f4eb0e40f01135d66ce677ea4 *DESCRIPTION
+ca75139953c8b9ba36a0e716e73cf131 *DESCRIPTION
 7d4eb9101278254c0a20b0701e950972 *NAMESPACE
 28568601f78522a7e6de46374c840837 *R/RCov.R
 b4a650a62c838bba96d89267194acbc1 *R/SCov.R
@@ -27,10 +27,11 @@ eb40c002b30576662b109793aeb5269a *R/symmhuber.inc.R
 15edadec9517a85f3e6acbea8ef00a93 *R/symmsign.shape.R
 93998ddb83edb4ec2b3dfe253909f139 *R/symmsign.shape.inc.R
 e7d2462aaf443112e36143318393221d *R/to.shape.R
-5f2380e5307d217e92d153f82fa9c7db *inst/ChangeLog
+a0a3f982d824628944316e4d049bef69 *build/partial.rdb
+3195672ce5a6c6ad10c39b5ec56ee22e *inst/ChangeLog
 c36f15a08a15c266591cb082b5e0487b *man/Huber.Rd
 36c74943ad0f15ccca776e7d70b0795c *man/SRCov.Rd
-cc9d52c352519d5137afa096508d695a *man/SpatialNP-package.Rd
+12b09107906dc00607b6b36a663dfee7 *man/SpatialNP-package.Rd
 7becfdab6e4184de4ea4e391a6730dbb *man/independencetests.Rd
 ff60c53d61fcce667af7f2bd1bdd6f60 *man/locationtests.Rd
 50c246248e1093d984bc0ae14e97cdb5 *man/shapematrices.Rd
